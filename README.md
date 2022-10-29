@@ -19,7 +19,7 @@ table..." sql in this notebook.
 
 ###### 3. Flask 
 Use the "ContactFlask" folder as a template to build simple applicaiton to get table data. 
---I use the environment variable setup, so need to edit configuration to add 3 environment variables (DBUSER, DBPW, DBHOST) before running
---pip install -r requirements.txt, to install required packages 
---The basic url format is:   <url>/api/<your interested database>/<your interested table>/<accountId>, accountId is the customer account id. 
+I use the environment variable setup, so need to edit configuration to add 3 environment variables (DBUSER, DBPW, DBHOST) before running
+pip install -r requirements.txt, to install required packages 
+The basic url format is:   (url)/api/(your interested database)/(your interested table)/(accountId), accountId is the customer account id. 
 
