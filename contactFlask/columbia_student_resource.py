@@ -2,7 +2,7 @@ import pymysql
 import os
 
 
-class ColumbiaStudentResource:
+class AccountResource:
 
     def __int__(self):
         pass
@@ -27,7 +27,17 @@ class ColumbiaStudentResource:
     def get_by_key(table_name, key):
 
         sql = "SELECT * FROM contacts."+table_name+" where accountId=%s"
-        conn = ColumbiaStudentResource._get_connection()
+        conn = AccountResource._get_connection()
+        cur = conn.cursor()
+        res = cur.execute(sql, args=key)
+        result = cur.fetchone()
+
+        return result
+
+    def get_by_union_info(key):
+
+        sql = "SELECT * FROM contacts.email join contacts.phone using (accountId) where accountId=%s"
+        conn = AccountResource._get_connection()
         cur = conn.cursor()
         res = cur.execute(sql, args=key)
         result = cur.fetchone()
