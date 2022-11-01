@@ -62,7 +62,7 @@ def get_contacts_address_by_uni(accountId):
     return rsp
 
 
-@app.route("/api/contacts/Accountinfo/<accountId>", methods=["GET"])
+@app.route("/api/contacts/<accountId>", methods=["GET"])
 def get_contacts_by_uni(accountId):
 
     result = AccountResource.get_by_union_info(accountId)
